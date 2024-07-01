@@ -3,11 +3,11 @@ import React from 'react';
 const FooterComponent = () => {
   return (
     <div>
-      <footer className='footer bg-primary text-white text-center py-3'>
-        <p className='mb-1'>&copy; {new Date().getFullYear()} Employee Management System. All Rights Reserved.</p>
+      <footer className='footer'>
+        <span>© 2024 Employee Management System. All rights reserved.</span>
       </footer>
     </div>
   );
-}
+};
 
 export default FooterComponent;
