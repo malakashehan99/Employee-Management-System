@@ -1,4 +1,4 @@
-package com.ms.ems;
+package com.msj.ems;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

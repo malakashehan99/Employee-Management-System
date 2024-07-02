@@ -1,8 +1,9 @@
-package com.ms.ems.service;
+package com.msj.ems.service;
 
-import com.ms.ems.dto.EmployeeDto;
+import com.msj.ems.dto.EmployeeDto;
 
 import java.util.List;
+
 
 public interface EmployeeService {
     EmployeeDto createEmployee(EmployeeDto employeeDto);

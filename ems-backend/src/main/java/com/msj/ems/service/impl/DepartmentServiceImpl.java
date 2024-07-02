@@ -1,12 +1,13 @@
-package com.ms.ems.service.impl;
+package com.msj.ems.service.impl;
 
-import com.ms.ems.dto.DepartmentDto;
-import com.ms.ems.entity.Department;
-import com.ms.ems.exception.ResourceNotFoundException;
-import com.ms.ems.mapper.DepartmentMapper;
-import com.ms.ems.repository.DepartmentRepository;
-import com.ms.ems.service.DepartmentService;
+
 import lombok.AllArgsConstructor;
+import com.msj.ems.dto.DepartmentDto;
+import com.msj.ems.entity.Department;
+import com.msj.ems.exception.ResourceNotFoundException;
+import com.msj.ems.mapper.DepartmentMapper;
+import com.msj.ems.repository.DepartmentRepository;
+import com.msj.ems.service.DepartmentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,6 +41,7 @@ public class DepartmentServiceImpl implements DepartmentService {
                 .collect(Collectors.toList());
     }
 
+
     @Override
     public DepartmentDto updateDepartment(Long departmentId, DepartmentDto updatedDepartment) {
 
@@ -54,6 +56,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
         return DepartmentMapper.mapToDepartmentDto(savedDepartment);
     }
+
 
     @Override
     public void deleteDepartment(Long departmentId) {

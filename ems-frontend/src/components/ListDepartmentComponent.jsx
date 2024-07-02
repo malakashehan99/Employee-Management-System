@@ -34,19 +34,23 @@ const ListDepartmentComponent = () => {
             console.error(error);
         })
     }
+
   return (
     <div className='container'>
-        <h2 className='text-center'>List of Departments</h2>
-        <Link to='/add-department' className='btn btn-primary mb-2'>Add Department</Link>
+        <h2 className='text-center text-muted'>Departments of Restaurant</h2>
+        <Link to='/add-department' className='btn btn-primary mb-2'>Add New Department</Link>
         <table className='table table-striped table-bordered'>
             <thead>
+
                 <tr>
-                    <th>Department Id</th>
+                    <th>Department ID</th>
                     <th>Department Name</th>
                     <th>Department Description</th>
                     <th>Actions</th>
                 </tr>
+
             </thead>
+
             <tbody>
                 {
                     departments.map( department => 

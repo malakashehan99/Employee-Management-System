@@ -1,5 +1,4 @@
-package com.ms.ems.dto;
-
+package com.msj.ems.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,8 +9,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DepartmentDto {
+
+public class EmployeeDto {
     private Long id;
-    private String departmentName;
-    private String departmentDescription;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private Long departmentId;
 }

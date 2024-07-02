@@ -1,5 +1,4 @@
-package com.ms.ems.entity;
-
+package com.msj.ems.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,6 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "departments")
+
 public class Department {
 
     @Id

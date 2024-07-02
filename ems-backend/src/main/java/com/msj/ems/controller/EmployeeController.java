@@ -1,8 +1,9 @@
-package com.ms.ems.controller;
+package com.msj.ems.controller;
 
-import com.ms.ems.dto.EmployeeDto;
+
 import lombok.AllArgsConstructor;
-import com.ms.ems.service.EmployeeService;
+import com.msj.ems.dto.EmployeeDto;
+import com.msj.ems.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,7 @@ public class EmployeeController {
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
+
     // Build Get Employee REST API
     @GetMapping("{id}")
     public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") Long employeeId){
@@ -31,12 +33,14 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeDto);
     }
 
+
     // Build Get All Employees REST API
     @GetMapping
     public ResponseEntity<List<EmployeeDto>> getAllEmployees(){
         List<EmployeeDto> employees = employeeService.getAllEmployees();
         return ResponseEntity.ok(employees);
     }
+
 
     // Build Update Employee REST API
     @PutMapping("{id}")
@@ -46,10 +50,12 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeDto);
     }
 
+
     // Build Delete Employee REST API
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId){
         employeeService.deleteEmployee(employeeId);
         return ResponseEntity.ok("Employee deleted successfully!.");
     }
+
 }

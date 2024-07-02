@@ -22,6 +22,8 @@ const DepartmentComponent = () => {
 
   }, [id])
 
+
+
   function saveOrUpdateDepartment(e){
     e.preventDefault();
 
@@ -29,14 +31,17 @@ const DepartmentComponent = () => {
 
     console.log(department); 
 
-    if(id){
+    if(id)
+      {
       updateDepartment(id, department).then((response) => {
         console.log(response.data);
         navigator('/departments');
       }).catch(error => {
         console.error(error);
       })
-    }else {
+    }
+    else 
+    {
       createDepartment(department).then((response) => {
         console.log(response.data);
         navigator('/departments')
@@ -47,25 +52,34 @@ const DepartmentComponent = () => {
 
   }
 
+
   function pageTitle(){
-    if(id){
+    if(id)
+      {
         return <h2 className='text-center'>Update Department</h2>
-    } else {
-        return <h2 className='text-center'>Add Department</h2>
+    } 
+    else 
+    {
+        return <h2 className='text-center'>Add New Department</h2>
     }
   }
+
 
   return (
     <div className='container'><br /><br />
       <div className='row'>
           <div className='card col-md-6 offset-md-3 offset-md-3'>
+
               {
                 pageTitle()
               }
 
               <div className='card-body'>
+
                   <form>
+
                       <div className='form-group mb-2'>
+
                           <label className='form-label'>Department Name:</label>
                           <input
                             type='text'
@@ -80,6 +94,7 @@ const DepartmentComponent = () => {
                       </div>
 
                       <div className='form-group mb-2'>
+
                           <label className='form-label'>Department Description:</label>
                           <input
                             type='text'
@@ -91,10 +106,13 @@ const DepartmentComponent = () => {
                           >
                           </input>
                       </div>
+
                       <button className='btn btn-success mb-2' onClick={(e) => saveOrUpdateDepartment(e)}>Submit</button>
+
                   </form>
 
               </div>
+              
           </div>
 
       </div>

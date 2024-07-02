@@ -1,8 +1,9 @@
-package com.ms.ems.service;
+package com.msj.ems.service;
 
-import com.ms.ems.dto.DepartmentDto;
+import com.msj.ems.dto.DepartmentDto;
 
 import java.util.List;
+
 
 public interface DepartmentService {
     DepartmentDto createDepartment(DepartmentDto departmentDto);
@@ -13,5 +14,5 @@ public interface DepartmentService {
 
     DepartmentDto updateDepartment(Long departmentId, DepartmentDto updatedDepartment);
 
-    void deleteDepartment(Long departmentID);
+    void deleteDepartment(Long departmentId);
 }

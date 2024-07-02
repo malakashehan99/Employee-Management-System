@@ -1,14 +1,15 @@
-package com.ms.ems.service.impl;
+package com.msj.ems.service.impl;
 
-import com.ms.ems.entity.Department;
-import com.ms.ems.repository.DepartmentRepository;
+
 import lombok.AllArgsConstructor;
-import com.ms.ems.dto.EmployeeDto;
-import com.ms.ems.entity.Employee;
-import com.ms.ems.exception.ResourceNotFoundException;
-import com.ms.ems.mapper.EmployeeMapper;
-import com.ms.ems.repository.EmployeeRepository;
-import com.ms.ems.service.EmployeeService;
+import com.msj.ems.dto.EmployeeDto;
+import com.msj.ems.entity.Department;
+import com.msj.ems.entity.Employee;
+import com.msj.ems.exception.ResourceNotFoundException;
+import com.msj.ems.mapper.EmployeeMapper;
+import com.msj.ems.repository.DepartmentRepository;
+import com.msj.ems.repository.EmployeeRepository;
+import com.msj.ems.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
+
 public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepository employeeRepository;
@@ -37,6 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeeMapper.mapToEmployeeDto(savedEmployee);
     }
 
+
     @Override
     public EmployeeDto getEmployeeById(Long employeeId) {
         Employee employee = employeeRepository.findById(employeeId)
@@ -45,6 +48,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return EmployeeMapper.mapToEmployeeDto(employee);
     }
+
 
     @Override
     public List<EmployeeDto> getAllEmployees() {

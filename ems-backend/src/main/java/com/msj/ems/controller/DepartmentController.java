@@ -1,8 +1,8 @@
-package com.ms.ems.controller;
+package com.msj.ems.controller;
 
-import com.ms.ems.dto.DepartmentDto;
-import com.ms.ems.service.DepartmentService;
 import lombok.AllArgsConstructor;
+import com.msj.ems.dto.DepartmentDto;
+import com.msj.ems.service.DepartmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,8 @@ public class DepartmentController {
 
     private DepartmentService departmentService;
 
-    // Build Create or Add Department REST API
+
+    // Build Create Department REST API
     @PostMapping
     public ResponseEntity<DepartmentDto> createDepartment(@RequestBody DepartmentDto departmentDto){
         DepartmentDto department = departmentService.createDepartment(departmentDto);
@@ -31,12 +32,14 @@ public class DepartmentController {
         return ResponseEntity.ok(departmentDto);
     }
 
+
     // Build Get All Departments REST API
     @GetMapping
     public ResponseEntity<List<DepartmentDto>> getAllDepartments(){
         List<DepartmentDto> departments = departmentService.getAllDepartments();
         return ResponseEntity.ok(departments);
     }
+
 
     // Build Update Department REST API
     @PutMapping("{id}")
@@ -45,6 +48,7 @@ public class DepartmentController {
         DepartmentDto departmentDto = departmentService.updateDepartment(departmentId, updatedDepartment);
         return ResponseEntity.ok(departmentDto);
     }
+
 
     // Build Delete Department REST API
     @DeleteMapping("{id}")
